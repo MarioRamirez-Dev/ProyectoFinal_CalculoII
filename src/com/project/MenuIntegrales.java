@@ -20,6 +20,14 @@ public class MenuIntegrales extends javax.swing.JFrame {
     public MenuIntegrales() {
         initComponents();  
         
+        MRU mru = new MRU();
+        mru.setSize(860,700);
+        mru.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(mru,BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
     }
 
     /**
@@ -225,9 +233,14 @@ public class MenuIntegrales extends javax.swing.JFrame {
 
     private void btnMRUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMRUMouseClicked
         MRU mru = new MRU();
-       
-        Component add = content.add(mru);
-        mru.setVisible(true);
+        mru.setSize(860,700);
+        mru.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(mru,BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+        
     }//GEN-LAST:event_btnMRUMouseClicked
 
     /**

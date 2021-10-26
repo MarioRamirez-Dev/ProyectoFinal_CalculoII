@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.project;
 
@@ -8,7 +8,7 @@ package com.project;
  *
  * @author MARIO
  */
-public class MRU extends javax.swing.JFrame {
+public class MRU extends javax.swing.JPanel {
 
     /**
      * Creates new form MRU
@@ -48,10 +48,6 @@ public class MRU extends javax.swing.JFrame {
         Label6 = new javax.swing.JLabel();
         Label7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("mru"); // NOI18N
-        setResizable(false);
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setPreferredSize(new java.awt.Dimension(860, 700));
@@ -98,8 +94,8 @@ public class MRU extends javax.swing.JFrame {
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(panel1Layout.createSequentialGroup()
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                 .addContainerGap(73, Short.MAX_VALUE)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panel1Layout.createSequentialGroup()
@@ -199,21 +195,37 @@ public class MRU extends javax.swing.JFrame {
         jLabel2.setText("Desarrollo Ejercicio");
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 440, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 859, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        int d,v,t,c,r,tf;
+        d=Integer.parseInt(txtd.getText());
+        v=Integer.parseInt(txtv.getText());
+        t=Integer.parseInt(txtt.getText());
+        tf=Integer.parseInt(txttf.getText());
+        c=d-(v*t);
+        r=(v*tf)+c;
+        Label1.setText(txtv.getText()+"=dx/dv");
+        Label2.setText("∫dx=∫"+txtv.getText()+"dt");
+        Label4.setText(txtd.getText()+"="+txtv.getText()+"("+txtt.getText()+")+c");
+        Label5.setText("c="+c);
+        Label6.setText("x="+txtv.getText()+"("+txttf.getText()+")+"+c);
+        Label7.setText("x="+r);
+    }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -232,22 +244,6 @@ public class MRU extends javax.swing.JFrame {
         Label7.setText("x="+r);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        int d,v,t,c,r,tf;
-        d=Integer.parseInt(txtd.getText());
-        v=Integer.parseInt(txtv.getText());
-        t=Integer.parseInt(txtt.getText());
-        tf=Integer.parseInt(txttf.getText());
-        c=d-(v*t);
-        r=(v*tf)+c;
-        Label1.setText(txtv.getText()+"=dx/dv");
-        Label2.setText("∫dx=∫"+txtv.getText()+"dt");
-        Label4.setText(txtd.getText()+"="+txtv.getText()+"("+txtt.getText()+")+c");
-        Label5.setText("c="+c);
-        Label6.setText("x="+txtv.getText()+"("+txttf.getText()+")+"+c);
-        Label7.setText("x="+r);
-    }//GEN-LAST:event_jButton1MouseClicked
-
     private void txttfMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txttfMouseEntered
         // TODO add your handling code here:
         Labelinf.setText("Tiempo para hallar la posición real");
@@ -261,42 +257,7 @@ public class MRU extends javax.swing.JFrame {
     private void txttfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txttfActionPerformed
-    
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MRU().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Label1;
