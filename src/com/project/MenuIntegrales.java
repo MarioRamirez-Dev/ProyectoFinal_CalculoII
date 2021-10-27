@@ -6,6 +6,9 @@ package com.project;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.Window;
 
 /**
  *
@@ -28,6 +31,16 @@ public class MenuIntegrales extends javax.swing.JFrame {
         content.add(mru,BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
+        //Método para centrar la ventana
+        centreWindow(this);
+    }
+    
+    //Método para centrar la ventana    
+    public static void centreWindow(Window frame) {
+        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
+        int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
+        frame.setLocation(x, y);
     }
 
     /**
@@ -52,7 +65,6 @@ public class MenuIntegrales extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1024, 750));
         setResizable(false);
 
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,7 +111,7 @@ public class MenuIntegrales extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("CÁLCULO II");
+        jLabel3.setText("CÁLCULO II - RESOLUCIÓN DE INTEGRALES");
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
@@ -108,9 +120,9 @@ public class MenuIntegrales extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 351, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(312, 312, 312)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 259, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(243, 243, 243)
                 .addComponent(btnMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +165,7 @@ public class MenuIntegrales extends javax.swing.JFrame {
             .addGroup(btnMRULayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(txtMRU)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         btnMRULayout.setVerticalGroup(
             btnMRULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,9 +181,8 @@ public class MenuIntegrales extends javax.swing.JFrame {
         menuLateralLayout.setVerticalGroup(
             menuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuLateralLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addComponent(btnMRU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(629, Short.MAX_VALUE))
+                .addGap(0, 661, Short.MAX_VALUE))
         );
 
         bg.add(menuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 700));

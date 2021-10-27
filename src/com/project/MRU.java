@@ -40,14 +40,15 @@ public class MRU extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         txttf = new javax.swing.JTextField();
         Labelinf = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Label7 = new javax.swing.JLabel();
+        Label6 = new javax.swing.JLabel();
+        Label5 = new javax.swing.JLabel();
         Label1 = new javax.swing.JLabel();
         Label2 = new javax.swing.JLabel();
         Label8 = new javax.swing.JLabel();
         Label4 = new javax.swing.JLabel();
-        Label5 = new javax.swing.JLabel();
-        Label6 = new javax.swing.JLabel();
-        Label7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setPreferredSize(new java.awt.Dimension(860, 700));
@@ -162,38 +163,87 @@ public class MRU extends javax.swing.JPanel {
         Labelinf.setForeground(new java.awt.Color(255, 0, 51));
         bg.add(Labelinf, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 430, 30));
 
-        Label1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label1.setText("v=dx/dt");
-        Label1.setName("label1"); // NOI18N
-        bg.add(Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
-
-        Label2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label2.setText("∫dx=∫vdt");
-        bg.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, -1, -1));
-
-        Label8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label8.setText("x=vt+c");
-        bg.add(Label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, -1, -1));
-
-        Label4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label4.setText("x=vt+c");
-        bg.add(Label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, -1, -1));
-
-        Label5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label5.setText("c=0");
-        bg.add(Label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, -1, -1));
-
-        Label6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label6.setText("x=vt+c");
-        bg.add(Label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 580, -1, -1));
-
-        Label7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Label7.setText("x=0");
-        bg.add(Label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 620, -1, 20));
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("Desarrollo Ejercicio");
-        bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 440, -1));
+        bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 250, -1));
+
+        jPanel1.setBackground(new java.awt.Color(52, 177, 208));
+
+        Label7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label7.setForeground(new java.awt.Color(255, 255, 255));
+        Label7.setText("x=0");
+
+        Label6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label6.setForeground(new java.awt.Color(255, 255, 255));
+        Label6.setText("x=vt+c");
+
+        Label5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label5.setForeground(new java.awt.Color(255, 255, 255));
+        Label5.setText("c=0");
+
+        Label1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label1.setForeground(new java.awt.Color(255, 255, 255));
+        Label1.setText("v=dx/dt");
+        Label1.setName("label1"); // NOI18N
+
+        Label2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label2.setForeground(new java.awt.Color(255, 255, 255));
+        Label2.setText("∫dx=∫vdt");
+
+        Label8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label8.setForeground(new java.awt.Color(255, 255, 255));
+        Label8.setText("x=vt+c");
+
+        Label4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Label4.setForeground(new java.awt.Color(255, 255, 255));
+        Label4.setText("x=vt+c");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label4)
+                            .addComponent(Label8)
+                            .addComponent(Label5))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label2)
+                            .addComponent(Label1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label6)
+                            .addComponent(Label7))
+                        .addGap(81, 81, 81))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Label1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Label6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Label8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Label4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Label5)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 470, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -219,12 +269,15 @@ public class MRU extends javax.swing.JPanel {
         tf=Integer.parseInt(txttf.getText());
         c=d-(v*t);
         r=(v*tf)+c;
+        
+        
         Label1.setText(txtv.getText()+"=dx/dv");
         Label2.setText("∫dx=∫"+txtv.getText()+"dt");
         Label4.setText(txtd.getText()+"="+txtv.getText()+"("+txtt.getText()+")+c");
         Label5.setText("c="+c);
         Label6.setText("x="+txtv.getText()+"("+txttf.getText()+")+"+c);
         Label7.setText("x="+r);
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -277,6 +330,7 @@ public class MRU extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private java.awt.Panel panel1;
     private javax.swing.JTextField txtd;
     private javax.swing.JTextField txtt;
