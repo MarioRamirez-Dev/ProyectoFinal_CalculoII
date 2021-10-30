@@ -16,7 +16,9 @@ public class MetodosIntegracion extends javax.swing.JPanel {
     public MetodosIntegracion() {
         initComponents();
     }
-
+    public int grado;
+    double Resultado1,Resultado2,Resultado3,Resultado4;
+    public ClsPolinomio q;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,19 +28,362 @@ public class MetodosIntegracion extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        BtnGrado = new javax.swing.JButton();
+        TxtGrado = new javax.swing.JTextField();
+        BtnContador = new javax.swing.JButton();
+        TxtCoeficiente = new javax.swing.JTextField();
+        lblx = new javax.swing.JLabel();
+        TxtSup = new javax.swing.JTextField();
+        TxtInf = new javax.swing.JTextField();
+        TxtDisplay = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        TxtPartes = new javax.swing.JTextField();
+        BtnIzquierdo = new javax.swing.JButton();
+        TxtIzquierdo = new javax.swing.JTextField();
+        BtnDerecho = new javax.swing.JButton();
+        TxtDerecho = new javax.swing.JTextField();
+        BtnSimpson = new javax.swing.JButton();
+        BtnTrapecio = new javax.swing.JButton();
+        TxtTrapecio = new javax.swing.JTextField();
+        TxtSimpson = new javax.swing.JTextField();
+        lblgrado = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 33)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Métodos de Integración");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 410, 70));
+
+        jPanel1.setBackground(new java.awt.Color(52, 177, 208));
+
+        BtnGrado.setBackground(new java.awt.Color(52, 177, 208));
+        BtnGrado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnGrado.setForeground(new java.awt.Color(255, 255, 255));
+        BtnGrado.setText("Grado");
+        BtnGrado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnGradoMouseClicked(evt);
+            }
+        });
+        BtnGrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnGradoActionPerformed(evt);
+            }
+        });
+
+        TxtGrado.setBackground(new java.awt.Color(204, 204, 204));
+        TxtGrado.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TxtGrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtGradoActionPerformed(evt);
+            }
+        });
+
+        BtnContador.setBackground(new java.awt.Color(52, 177, 208));
+        BtnContador.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnContador.setForeground(new java.awt.Color(255, 255, 255));
+        BtnContador.setText("Coeficiente");
+        BtnContador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnContadorMouseClicked(evt);
+            }
+        });
+        BtnContador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnContadorActionPerformed(evt);
+            }
+        });
+
+        TxtCoeficiente.setBackground(new java.awt.Color(204, 204, 204));
+        TxtCoeficiente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        lblx.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        lblx.setForeground(new java.awt.Color(255, 255, 255));
+        lblx.setText("X");
+
+        TxtSup.setBackground(new java.awt.Color(204, 204, 204));
+        TxtSup.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        TxtInf.setBackground(new java.awt.Color(204, 204, 204));
+        TxtInf.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        TxtDisplay.setBackground(new java.awt.Color(204, 204, 204));
+        TxtDisplay.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("n =");
+
+        TxtPartes.setBackground(new java.awt.Color(204, 204, 204));
+        TxtPartes.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        BtnIzquierdo.setBackground(new java.awt.Color(52, 177, 208));
+        BtnIzquierdo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnIzquierdo.setForeground(new java.awt.Color(255, 255, 255));
+        BtnIzquierdo.setText("Izquierdo");
+        BtnIzquierdo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnIzquierdoMouseClicked(evt);
+            }
+        });
+
+        TxtIzquierdo.setBackground(new java.awt.Color(204, 204, 204));
+        TxtIzquierdo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        BtnDerecho.setBackground(new java.awt.Color(52, 177, 208));
+        BtnDerecho.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnDerecho.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDerecho.setText("Derecho");
+        BtnDerecho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnDerechoMouseClicked(evt);
+            }
+        });
+
+        TxtDerecho.setBackground(new java.awt.Color(204, 204, 204));
+        TxtDerecho.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        BtnSimpson.setBackground(new java.awt.Color(52, 177, 208));
+        BtnSimpson.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnSimpson.setForeground(new java.awt.Color(255, 255, 255));
+        BtnSimpson.setText("Simpson");
+        BtnSimpson.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnSimpsonMouseClicked(evt);
+            }
+        });
+
+        BtnTrapecio.setBackground(new java.awt.Color(52, 177, 208));
+        BtnTrapecio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnTrapecio.setForeground(new java.awt.Color(255, 255, 255));
+        BtnTrapecio.setText("Trapecio");
+        BtnTrapecio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnTrapecioMouseClicked(evt);
+            }
+        });
+
+        TxtTrapecio.setBackground(new java.awt.Color(204, 204, 204));
+        TxtTrapecio.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        TxtSimpson.setBackground(new java.awt.Color(204, 204, 204));
+        TxtSimpson.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        lblgrado.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("∫");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(324, Short.MAX_VALUE)
+                .addComponent(TxtPartes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(306, 306, 306))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(150, 150, 150)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(40, 40, 40)
+                                    .addComponent(BtnGrado))
+                                .addComponent(BtnContador))
+                            .addGap(25, 25, 25)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TxtGrado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TxtCoeficiente, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(12, 12, 12)
+                            .addComponent(lblx, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(lblgrado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(100, 100, 100)
+                            .addComponent(TxtSup, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(120, 120, 120)
+                            .addComponent(TxtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(90, 90, 90)
+                            .addComponent(TxtInf, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(83, 83, 83)
+                            .addComponent(jLabel6))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(BtnIzquierdo)
+                            .addGap(13, 13, 13)
+                            .addComponent(TxtIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(60, 60, 60)
+                            .addComponent(BtnTrapecio)
+                            .addGap(17, 17, 17)
+                            .addComponent(TxtTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(BtnDerecho)
+                            .addGap(19, 19, 19)
+                            .addComponent(TxtDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(60, 60, 60)
+                            .addComponent(BtnSimpson)
+                            .addGap(15, 15, 15)
+                            .addComponent(TxtSimpson, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TxtPartes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(136, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(BtnGrado)
+                            .addGap(15, 15, 15)
+                            .addComponent(BtnContador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(TxtGrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addComponent(TxtCoeficiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(lblx, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(lblgrado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(20, 20, 20)
+                    .addComponent(TxtSup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)
+                    .addComponent(TxtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TxtInf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel6)))
+                    .addGap(32, 32, 32)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(BtnIzquierdo)
+                        .addComponent(TxtIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnTrapecio)
+                        .addComponent(TxtTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(15, 15, 15)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(BtnDerecho)
+                        .addComponent(TxtDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnSimpson)
+                        .addComponent(TxtSimpson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 670, 350));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnGradoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGradoMouseClicked
+        // TODO add your handling code here:
+        grado=Integer.parseInt(TxtGrado.getText());
+        q=new ClsPolinomio(grado+1);
+        TxtGrado.setText(null);
+        lblgrado.setText(" " + grado);
+    }//GEN-LAST:event_BtnGradoMouseClicked
+
+    private void BtnGradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnGradoActionPerformed
+
+    private void TxtGradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtGradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtGradoActionPerformed
+
+    private void BtnContadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnContadorMouseClicked
+        // TODO add your handling code here:
+        if(grado>0)
+        {
+            q.a(grado, Float.parseFloat(TxtCoeficiente.getText()));
+            TxtCoeficiente.setText(null);
+            grado-=1;
+            lblgrado.setText(""+grado+"");
+            TxtCoeficiente.requestFocus();
+
+        }
+        else
+
+        {
+            q.a(grado, Float.parseFloat(TxtCoeficiente.getText()));
+            TxtDisplay.setText(q.ver());
+        }
+    }//GEN-LAST:event_BtnContadorMouseClicked
+
+    private void BtnContadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnContadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnContadorActionPerformed
+
+    private void BtnIzquierdoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnIzquierdoMouseClicked
+        // TODO add your handling code here:
+        Resultado1=q.izquierdo(Float.parseFloat(TxtInf.getText()),
+            Float.parseFloat(TxtSup.getText()), Integer.parseInt(TxtPartes.getText()));
+        TxtIzquierdo.setText(Double.toString(Resultado1));
+    }//GEN-LAST:event_BtnIzquierdoMouseClicked
+
+    private void BtnDerechoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDerechoMouseClicked
+        // TODO add your handling code here:
+        Resultado3=q.derecho(Float.parseFloat(TxtInf.getText()),
+            Float.parseFloat(TxtSup.getText()), Integer.parseInt(TxtPartes.getText()));
+        TxtDerecho.setText(Double.toString(Resultado3));
+    }//GEN-LAST:event_BtnDerechoMouseClicked
+
+    private void BtnSimpsonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnSimpsonMouseClicked
+        // TODO add your handling code here:
+        Resultado2=q.simpson(Float.parseFloat(TxtInf.getText()),
+            Float.parseFloat(TxtSup.getText()), Integer.parseInt(TxtPartes.getText()));
+        TxtSimpson.setText(Double.toString(Resultado2));
+    }//GEN-LAST:event_BtnSimpsonMouseClicked
+
+    private void BtnTrapecioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTrapecioMouseClicked
+        // TODO add your handling code here:
+        Resultado4=q.trapecio(Float.parseFloat(TxtInf.getText()),
+            Float.parseFloat(TxtSup.getText()), Integer.parseInt(TxtPartes.getText()));
+        TxtTrapecio.setText(Double.toString(Resultado4));
+    }//GEN-LAST:event_BtnTrapecioMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnContador;
+    private javax.swing.JButton BtnDerecho;
+    private javax.swing.JButton BtnGrado;
+    private javax.swing.JButton BtnIzquierdo;
+    private javax.swing.JButton BtnSimpson;
+    private javax.swing.JButton BtnTrapecio;
+    private javax.swing.JTextField TxtCoeficiente;
+    private javax.swing.JTextField TxtDerecho;
+    private javax.swing.JTextField TxtDisplay;
+    private javax.swing.JTextField TxtGrado;
+    private javax.swing.JTextField TxtInf;
+    private javax.swing.JTextField TxtIzquierdo;
+    private javax.swing.JTextField TxtPartes;
+    private javax.swing.JTextField TxtSimpson;
+    private javax.swing.JTextField TxtSup;
+    private javax.swing.JTextField TxtTrapecio;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblgrado;
+    private javax.swing.JLabel lblx;
     // End of variables declaration//GEN-END:variables
 }

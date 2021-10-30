@@ -11,6 +11,8 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import java.net.URISyntaxException;
+import java.io.IOException;
 
 /**
  *
@@ -135,6 +137,11 @@ public class Principal extends javax.swing.JFrame {
         btnManualUsuario.setBorder(null);
         btnManualUsuario.setBorderPainted(false);
         btnManualUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnManualUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnManualUsuarioMouseClicked(evt);
+            }
+        });
         btnManualUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManualUsuarioActionPerformed(evt);
@@ -168,6 +175,11 @@ public class Principal extends javax.swing.JFrame {
         btnGraficadora.setBorder(null);
         btnGraficadora.setBorderPainted(false);
         btnGraficadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGraficadora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnGraficadoraMouseClicked(evt);
+            }
+        });
         btnGraficadora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGraficadoraActionPerformed(evt);
@@ -289,6 +301,31 @@ public class Principal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnDevelopersMouseClicked
 
+    private void btnGraficadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGraficadoraMouseClicked
+        if(java.awt.Desktop.isDesktopSupported()){
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            
+            if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
+                try{
+                    java.net.URI uri = new java.net.URI("https://www.geogebra.org/?lang=es");
+                    desktop.browse(uri);
+                }catch(URISyntaxException | IOException ex){}
+            }
+        }
+    }//GEN-LAST:event_btnGraficadoraMouseClicked
+
+    private void btnManualUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnManualUsuarioMouseClicked
+        if(java.awt.Desktop.isDesktopSupported()){
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            
+            if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
+                try{
+                    java.net.URI uri = new java.net.URI("https://drive.google.com/drive/folders/1D0Em-Znhb9TwKgZWvNHGWnLOHJnSe0uZ?usp=sharing");
+                    desktop.browse(uri);
+                }catch(URISyntaxException | IOException ex){}
+            }
+    }//GEN-LAST:event_btnManualUsuarioMouseClicked
+    }
     /**
      * @param args the command line arguments
      */

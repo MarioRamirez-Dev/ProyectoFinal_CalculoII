@@ -23,12 +23,12 @@ public class MenuIntegrales extends javax.swing.JFrame {
     public MenuIntegrales() {
         initComponents();  
         
-        MRU mru = new MRU();
-        mru.setSize(860,700);
-        mru.setLocation(0,0);
+        MetodosIntegracion mI = new MetodosIntegracion();
+        mI.setSize(860,7000);
+        mI.setLocation(0,0);
         
         content.removeAll();
-        content.add(mru,BorderLayout.CENTER);
+        content.add(mI, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
         //Método para centrar la ventana
@@ -61,6 +61,10 @@ public class MenuIntegrales extends javax.swing.JFrame {
         menuLateral = new javax.swing.JPanel();
         btnMRU = new javax.swing.JPanel();
         txtMRU = new javax.swing.JLabel();
+        btnNotacionSigma = new javax.swing.JPanel();
+        txtMRU1 = new javax.swing.JLabel();
+        btnMetodoIntegracion = new javax.swing.JPanel();
+        txtmI = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -165,11 +169,70 @@ public class MenuIntegrales extends javax.swing.JFrame {
             .addGroup(btnMRULayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(txtMRU)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnMRULayout.setVerticalGroup(
             btnMRULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtMRU, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+        );
+
+        btnNotacionSigma.setBackground(new java.awt.Color(52, 177, 208));
+        btnNotacionSigma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNotacionSigma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNotacionSigmaMouseClicked(evt);
+            }
+        });
+
+        txtMRU1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtMRU1.setForeground(new java.awt.Color(255, 255, 255));
+        txtMRU1.setText("Notación Sigma");
+        txtMRU1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout btnNotacionSigmaLayout = new javax.swing.GroupLayout(btnNotacionSigma);
+        btnNotacionSigma.setLayout(btnNotacionSigmaLayout);
+        btnNotacionSigmaLayout.setHorizontalGroup(
+            btnNotacionSigmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNotacionSigmaLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(txtMRU1)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        btnNotacionSigmaLayout.setVerticalGroup(
+            btnNotacionSigmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtMRU1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+        );
+
+        btnMetodoIntegracion.setBackground(new java.awt.Color(52, 177, 208));
+        btnMetodoIntegracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMetodoIntegracion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMetodoIntegracionMouseClicked(evt);
+            }
+        });
+
+        txtmI.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtmI.setForeground(new java.awt.Color(255, 255, 255));
+        txtmI.setText("Métodos Integración");
+        txtmI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        txtmI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtmIMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnMetodoIntegracionLayout = new javax.swing.GroupLayout(btnMetodoIntegracion);
+        btnMetodoIntegracion.setLayout(btnMetodoIntegracionLayout);
+        btnMetodoIntegracionLayout.setHorizontalGroup(
+            btnMetodoIntegracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnMetodoIntegracionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtmI)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnMetodoIntegracionLayout.setVerticalGroup(
+            btnMetodoIntegracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtmI, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout menuLateralLayout = new javax.swing.GroupLayout(menuLateral);
@@ -177,12 +240,18 @@ public class MenuIntegrales extends javax.swing.JFrame {
         menuLateralLayout.setHorizontalGroup(
             menuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnMRU, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnNotacionSigma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnMetodoIntegracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuLateralLayout.setVerticalGroup(
             menuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuLateralLayout.createSequentialGroup()
+                .addComponent(btnMetodoIntegracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnMRU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 661, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNotacionSigma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 571, Short.MAX_VALUE))
         );
 
         bg.add(menuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 700));
@@ -254,6 +323,39 @@ public class MenuIntegrales extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnMRUMouseClicked
 
+    private void btnNotacionSigmaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNotacionSigmaMouseClicked
+        NotacionSigma nS = new NotacionSigma();
+        nS.setSize(860,700);
+        nS.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(nS, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_btnNotacionSigmaMouseClicked
+
+    private void btnMetodoIntegracionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMetodoIntegracionMouseClicked
+        MetodosIntegracion mI = new MetodosIntegracion();
+        mI.setSize(860,7000);
+        mI.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(mI, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_btnMetodoIntegracionMouseClicked
+
+    private void txtmIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtmIMouseClicked
+        MetodosIntegracion mI = new MetodosIntegracion();
+        mI.setSize(860,7000);
+        mI.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(mI, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_txtmIMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -293,12 +395,16 @@ public class MenuIntegrales extends javax.swing.JFrame {
     private javax.swing.JPanel bg;
     private javax.swing.JLabel btnClose;
     private javax.swing.JPanel btnMRU;
+    private javax.swing.JPanel btnMetodoIntegracion;
     private javax.swing.JLabel btnMinimize;
+    private javax.swing.JPanel btnNotacionSigma;
     private javax.swing.JPanel content;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel menuLateral;
     private javax.swing.JLabel txtMRU;
+    private javax.swing.JLabel txtMRU1;
+    private javax.swing.JLabel txtmI;
     // End of variables declaration//GEN-END:variables
 }
