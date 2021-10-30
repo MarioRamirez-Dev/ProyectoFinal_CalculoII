@@ -7,6 +7,7 @@ package com.project;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 
@@ -33,6 +34,12 @@ public class MenuIntegrales extends javax.swing.JFrame {
         content.repaint();
         //Método para centrar la ventana
         centreWindow(this);
+        setIconImage(getIconImage());
+    }
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("icon/icon.png"));
+        return retValue;
     }
     
     //Método para centrar la ventana    
@@ -68,6 +75,7 @@ public class MenuIntegrales extends javax.swing.JFrame {
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cálculo II - Resolución de Integrales");
         setUndecorated(true);
         setResizable(false);
 
@@ -196,7 +204,7 @@ public class MenuIntegrales extends javax.swing.JFrame {
             .addGroup(btnNotacionSigmaLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(txtMRU1)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnNotacionSigmaLayout.setVerticalGroup(
             btnNotacionSigmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

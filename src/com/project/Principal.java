@@ -5,6 +5,7 @@
 package com.project;
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 import javax.swing.Icon;
@@ -27,6 +28,15 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         centreWindow(this);
+        setIconImage(getIconImage());
+        
+        //setIconImage(new ImageIcon(getClass().getResource("../icon/icon.png")).getImage());
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("icon/icon.png"));
+        return retValue;
     }
     //Metodo para centrar la ventana
     public static void centreWindow(Window frame) {
@@ -58,6 +68,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cálculo II - Inicio");
         setLocation(new java.awt.Point(50, 50));
         setName("framePrincipal"); // NOI18N
         setUndecorated(true);
@@ -307,7 +318,7 @@ public class Principal extends javax.swing.JFrame {
             
             if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
                 try{
-                    java.net.URI uri = new java.net.URI("https://www.geogebra.org/?lang=es");
+                    java.net.URI uri = new java.net.URI("https://www.geogebra.org/graphing?lang=es");
                     desktop.browse(uri);
                 }catch(URISyntaxException | IOException ex){}
             }
@@ -357,6 +368,7 @@ public class Principal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
+                
             }
             
            

@@ -6,6 +6,7 @@ package com.project;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 
@@ -34,8 +35,13 @@ public class Formulario extends javax.swing.JFrame {
         
         //Método para centrar la ventana
         centreWindow(this);
+        setIconImage(getIconImage());
     }
-
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("icon/icon.png"));
+        return retValue;
+    }
     //Metodo para centrar la ventana
     public static void centreWindow(Window frame) {
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -80,6 +86,7 @@ public class Formulario extends javax.swing.JFrame {
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cálculo II - Formulario");
         setUndecorated(true);
         setResizable(false);
 
@@ -249,7 +256,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnForm1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnFuerzayPresion1.setBackground(new java.awt.Color(52, 177, 208));
@@ -280,7 +287,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnFuerzayPresion1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion1)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnForm2.setBackground(new java.awt.Color(52, 177, 208));
@@ -311,7 +318,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnForm2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion2)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnIntegralMRU.setBackground(new java.awt.Color(52, 177, 208));
@@ -342,7 +349,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnIntegralMRULayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion3)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnTrabajo.setBackground(new java.awt.Color(52, 177, 208));
@@ -373,7 +380,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnTrabajoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion4)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnAreaSuperficie.setBackground(new java.awt.Color(52, 177, 208));
@@ -404,7 +411,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnAreaSuperficieLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion5)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnVolumenes.setBackground(new java.awt.Color(52, 177, 208));
@@ -435,7 +442,7 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(btnVolumenesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtFuerzayPresion6)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout menuLateralLayout = new javax.swing.GroupLayout(menuLateral);

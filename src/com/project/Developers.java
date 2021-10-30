@@ -5,6 +5,7 @@
 package com.project;
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 
@@ -22,6 +23,12 @@ public class Developers extends javax.swing.JFrame {
         initComponents();
         //Metodo para centrar
         centreWindow(this);
+        setIconImage(getIconImage());
+    }
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("icon/icon.png"));
+        return retValue;
     }
     //Metodo para centrar
     public static void centreWindow(Window frame) {
@@ -49,15 +56,24 @@ public class Developers extends javax.swing.JFrame {
         backGround = new javax.swing.JPanel();
         dev2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         dev4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         dev5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         dev6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculo II - Desarrolladores");
         setMaximumSize(new java.awt.Dimension(880, 640));
         setUndecorated(true);
         setResizable(false);
@@ -96,6 +112,11 @@ public class Developers extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Segoe UI", 1, 50)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("DESARROLLADORES");
+        title.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                titleMouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,96 +167,165 @@ public class Developers extends javax.swing.JFrame {
 
         dev2.setBackground(new java.awt.Color(239, 75, 76));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Ferdy Juanito Ramírez Cardona");
+        jLabel4.setText("Roberto ");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Vásquez");
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("0903-20-13236");
 
         javax.swing.GroupLayout dev2Layout = new javax.swing.GroupLayout(dev2);
         dev2.setLayout(dev2Layout);
         dev2Layout.setHorizontalGroup(
             dev2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev2Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(34, 34, 34))
+            .addGroup(dev2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(dev2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel4))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         dev2Layout.setVerticalGroup(
             dev2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev2Layout.createSequentialGroup()
-                .addGap(0, 169, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(dev2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(23, 23, 23))
         );
 
         backGround.add(dev2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 280, 200));
 
         dev4.setBackground(new java.awt.Color(239, 75, 76));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Mario Eduardo Ramírez Flores");
+        jLabel6.setText("Mario");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Ramírez");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("0903-20-8823");
 
         javax.swing.GroupLayout dev4Layout = new javax.swing.GroupLayout(dev4);
         dev4.setLayout(dev4Layout);
         dev4Layout.setHorizontalGroup(
             dev4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev4Layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(34, 34, 34))
+            .addGroup(dev4Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(dev4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel13)
+                    .addGroup(dev4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         dev4Layout.setVerticalGroup(
             dev4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev4Layout.createSequentialGroup()
-                .addContainerGap(169, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(dev4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(26, 26, 26))
         );
 
         backGround.add(dev4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 280, 200));
 
         dev5.setBackground(new java.awt.Color(239, 75, 76));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Ferdy Juanito Ramírez Cardona");
+        jLabel8.setText("Ferdy");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Ramírez");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("0903-20-4790");
 
         javax.swing.GroupLayout dev5Layout = new javax.swing.GroupLayout(dev5);
         dev5.setLayout(dev5Layout);
         dev5Layout.setHorizontalGroup(
             dev5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev5Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(34, 34, 34))
+            .addGroup(dev5Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(dev5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         dev5Layout.setVerticalGroup(
             dev5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev5Layout.createSequentialGroup()
-                .addGap(0, 169, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(dev5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel11)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         backGround.add(dev5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 280, 200));
 
         dev6.setBackground(new java.awt.Color(239, 75, 76));
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Ferdy Juanito Ramírez Cardona");
+        jLabel9.setText("Erick ");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Méndez");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("0903-20-8650");
 
         javax.swing.GroupLayout dev6Layout = new javax.swing.GroupLayout(dev6);
         dev6.setLayout(dev6Layout);
         dev6Layout.setHorizontalGroup(
             dev6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev6Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addGap(34, 34, 34))
+            .addGroup(dev6Layout.createSequentialGroup()
+                .addGroup(dev6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dev6Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(dev6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(dev6Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel12)))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         dev6Layout.setVerticalGroup(
             dev6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dev6Layout.createSequentialGroup()
-                .addGap(0, 169, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(dev6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(jLabel12)
+                .addGap(26, 26, 26))
         );
 
         backGround.add(dev6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 280, 200));
@@ -284,6 +374,10 @@ public class Developers extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jLabel2MouseClicked
 
+    private void titleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_titleMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_titleMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -330,9 +424,17 @@ public class Developers extends javax.swing.JFrame {
     private javax.swing.JPanel dev6;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel title;
