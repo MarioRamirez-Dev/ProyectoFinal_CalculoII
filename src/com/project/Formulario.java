@@ -24,12 +24,12 @@ public class Formulario extends javax.swing.JFrame {
     public Formulario() {
         initComponents();
         
-        CentrosdeMasayCentroides contenido = new CentrosdeMasayCentroides();
-        contenido.setSize(760,700);
-        contenido.setLocation(0,0);
+        FormularioGeneral1 fG1 = new FormularioGeneral1();
+        fG1.setSize(760,700);
+        fG1.setLocation(0,0);
         
         content.removeAll();
-        content.add(contenido, BorderLayout.CENTER);
+        content.add(fG1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
         
